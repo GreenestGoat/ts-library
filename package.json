@@ -1,0 +1,52 @@
+{
+  "name": "<LIBRARY_NAME>",
+  "version": "1.0.10",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+<GITHUB_REPO_URL>.git"
+  },
+  "bugs": {
+    "url": "<GITHUB_REPO_URL>/issues"
+  },
+  "homepage": "<LIBRARY_WEBSITE_URL>",
+  "author": {
+    "name": "<AUTHOR_NAME>"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/<LIBRARY_NAME>.cjs",
+  "module": "dist/<LIBRARY_NAME>.js",
+  "exports": {
+    "import": {
+      "development": "./dist/<LIBRARY_NAME>.js",
+      "production": "./dist/<LIBRARY_NAME>.min.js"
+    },
+    "require": {
+      "development": "./dist/<LIBRARY_NAME>.cjs",
+      "production": "./dist/<LIBRARY_NAME>.min.cjs"
+    },
+    "default": "./dist/<LIBRARY_NAME>.js"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/runtime": "^7.26.10",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "prettier": "^3.5.3",
+    "rollup": "^4.36.0",
+    "rollup-plugin-esbuild-minify": "^1.2.0",
+    "rollup-plugin-optimize-js": "^0.0.4",
+    "rollup-plugin-prettier": "^4.1.2",
+    "rollup-plugin-version-injector": "^1.3.3",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.2"
+  }
+}
