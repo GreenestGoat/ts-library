@@ -5,7 +5,6 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import versionInjector from "rollup-plugin-version-injector";
 import prettier from "rollup-plugin-prettier";
-import optimizeJs from "rollup-plugin-optimize-js";
 
 const babelConfig = {
   babelHelpers: "bundled",
@@ -57,7 +56,6 @@ export default [
         singleQuote: true,
         bracketSpacing: true,
       }),
-      optimizeJs(),
     ],
     treeshake: {
       moduleSideEffects: false,
@@ -91,7 +89,6 @@ export default [
         legalComments: "none",
         logLevel: "warning",
       }),
-      optimizeJs(),
     ],
     treeshake: {
       moduleSideEffects: false,
@@ -121,7 +118,6 @@ export default [
           tag: "<LIBRARY_NAME> @{version}",
         },
       }),
-      optimizeJs(),
     ],
     treeshake: {
       moduleSideEffects: false,
@@ -156,7 +152,6 @@ export default [
         legalComments: "none",
         logLevel: "warning",
       }),
-      optimizeJs(),
     ],
     treeshake: {
       moduleSideEffects: false,
